@@ -10,6 +10,18 @@ To install Node.js dependencies you're going to use npm. In the application fold
 $ npm install
 ```
 
+To start the application
+
+```bash
+$ mongod
+```
+
+Then
+
+```bash
+$ node app.js
+```
+
 ## Running The Application
 After the install process is over, you'll be able to run your application
 Your application should run on port 3000 , so in your browser just go to [http://localhost:3000](http://localhost:3000)
