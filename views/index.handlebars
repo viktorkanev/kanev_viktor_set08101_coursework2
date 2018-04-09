@@ -1,0 +1,24 @@
+<!---<div class="container">
+    <h1>{{{title}}}</h1>
+{{#each articles}}
+<h1>{{this.title}}<br></h1>
+<h4>Author:{{this.author}}<br></h4>
+{{this.body}}<br><br>
+{{/each}}
+</div> --->
+{{#each articles}}
+<section id="content">
+			<article>
+				<header>
+					<h2>{{this.title}}</h2>
+					<div class="meta">
+						Posted By <strong>{{this.author}}</strong>
+					</div><!-- meta-->
+				</header>
+				<p>{{this.body}}</p>
+				<footer>
+					<a class="readmore" href="/article/{{this._id}}"><strong>Read More</strong></a>
+				</footer>
+			</article>
+		</section>
+{{/each}}

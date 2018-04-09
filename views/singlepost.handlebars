@@ -1,0 +1,28 @@
+<section id="content">
+	<article>
+		<header>
+			<h2>{{article.title}}</h2>
+				<div class="meta">
+					Posted By <strong>{{article.author}}</strong>
+				</div><!-- meta-->
+		</header>
+			<p>{{article.body}}</p><hr>
+			<p>{{comments}}</p><br>
+			{{#if user}}
+			<div class="add-form">
+				<form method="POST", action="/articles/comment">
+				<p>
+					<label>Add comment:</label>
+					<textarea type="text" name="comment"></textarea>
+				</p>
+				<button type="submit", value="Submit" class="btn btn-default"><strong>Submit comment</strong></button>
+				</form>
+			</div><br>
+			{{else}}
+			{{/if}}
+			{{#if (eq user.permission "admin")}}
+            <a href="/article/edit/{{article._id}}"><button type="submit" class="btn btn-info">Edit</button></a>
+			<a href="#"><button type="submit" class="btn btn-danger deletepost" data-id="{{article._id}}"></a>Delete</button></a>
+			{{/if}}
+	</article>
+</section>

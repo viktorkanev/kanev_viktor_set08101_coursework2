@@ -1,0 +1,27 @@
+<section id="content">
+			<div class="add-form"><br>
+				{{#if errors}}
+			{{#each errors}}
+				<div class="alert alert-danger">{{msg}}</div>
+			{{/each}}
+			{{/if}}
+				<h2>Add Post</h2>
+				<form method="POST" , action="/articles/add">
+					<p>
+						<label>Post Title: </label>
+						<input type="text" name="title">
+					</p>
+					<p>
+						<label>Author: </label>
+						<input type="text" name="author">
+					</p>
+					<p>
+						<label>Body: </label>
+						<textarea type="text" name="body"></textarea>
+					</p>
+					<p>
+						<button type="submit", value="Submit" class="btn btn-default"><strong>Add Post</strong></button>
+					</p>
+				</form>
+			</div><!-- add form -->
+		</section>

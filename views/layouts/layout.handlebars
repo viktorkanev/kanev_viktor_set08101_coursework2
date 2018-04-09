@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MyFitAssistant Blog</title>
+    <link rel="stylesheet" href="/css/normalize.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/fonts/NovaMono.ttf"/>
+		<script src="/js/jquery-3.3.1.js"></script>
+		<script src="/js/bootstrap.js"></script>
+		<script src="/js/main.js"></script>
+</head>
+<body>
+    <header id="main-header">
+			<div class="container">
+				<div id="branding">
+					<a href="/"><img src="/img/logo.png" alt="MyFitAssistant Blog"></a>
+					<h1>MyFitAssistant Blog</h1>
+				</div><!-- branding -->
+				<nav id="main-nav">
+					<ul>
+						{{#if user}}
+						<li><a href="/">Home</a></li>
+						<li><a href="/users/addpost">Add Post</a></li>
+						<li><a href="/users/logout">Logout</a></li>
+						{{else}}						
+						<li><a href="/">Home</a></li>
+						<li><a href="/users/login">Login</a></li>
+						<li><a href="/users/register">Register</a></li>	
+						{{/if}}					
+					</ul>
+				</nav>
+			</div><!-- container -->
+		</header>
+        <div class="container">
+		  {{#if success_msg}}
+            <div class="alert alert-success">{{success_msg}}</div>
+          {{/if}}
+
+          {{#if error_msg}}
+            <div class="alert alert-danger">{{error_msg}}</div>
+          {{/if}}
+
+          {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+          {{/if}}
+            {{{body}}}            
+        </div>
+<footer id="main-footer">
+                <div class="container">
+					<div class="footer-left">
+						<p class="copy">Copyright &copy; 2018, MyFitAssistant Blog</p>
+					</div>
+				</div>
+</footer>
+
+        
+</body>
+</html>

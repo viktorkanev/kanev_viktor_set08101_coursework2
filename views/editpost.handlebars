@@ -1,0 +1,22 @@
+<section id="content">
+			<div class="add-form">
+				<h2>Add Post</h2>
+				<form method="POST" , action="/articles/edit/{{article._id}}">
+					<p>
+						<label>Post Title: </label>
+						<input type="text" name="title" value="{{article.title}}">
+					</p>
+					<p>
+						<label>Author: </label>
+						<input type="text" name="author" value="{{article.author}}">
+					</p>
+					<p>
+						<label>Body: </label>
+						<textarea type="text" name="body">{{article.body}}</textarea>
+					</p>
+					<p>
+						<button type="submit", value="Submit" class="btn btn-default"><strong>Edit Post</strong></button>
+					</p>
+				</form>
+			</div><!-- add form -->
+		</section>
